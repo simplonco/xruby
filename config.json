@@ -39,9 +39,12 @@
     "binary-search-tree",
     "crypto-square",
     "clock",
+    "alphametics",
+    "rail-fence-cipher",
     "acronym",
     "scrabble-score",
     "nucleotide-count",
+    "flatten-array",
     "hexadecimal",
     "say",
     "meetup",
@@ -85,6 +88,7 @@
   ],
   "ignored": [
     "docs",
+    "img",
     "lib"
   ],
   "foregone": [

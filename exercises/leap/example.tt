@@ -10,15 +10,15 @@ class Date
     throw "Implement this yourself instead of using Ruby's implementation."
   end
 
-  alias_method :gregorian_leap?, :leap?
-  alias_method :julian_leap?, :leap?
+  alias gregorian_leap? leap?
+  alias julian_leap? leap?
 end
 
 class YearTest < Minitest::Test<% test_cases.each do |test_case| %>
   def <%= test_case.name %><% if test_case.skipped? %>
     skip<% end %><% if test_case.expected%>
-    assert <%= test_case.do %>, '<%= test_case.msg%>'<% else %>
-    refute <%= test_case.do %>, '<%= test_case.msg%>'<% end%>
+    assert <%= test_case.do %>, "<%= test_case.failure_message%>"<% else %>
+    refute <%= test_case.do %>, "<%= test_case.failure_message%>"<% end%>
   end
 <% end %>
 <%= IO.read(XRUBY_LIB + '/bookkeeping.md') %>
